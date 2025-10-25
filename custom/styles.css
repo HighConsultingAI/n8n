@@ -1,0 +1,61 @@
+@import url("/home/node/.n8n/custom/inject.css");
+/* ========= High Consulting AI OS - custom theme ========= */
+
+/* Hide default n8n branding */
+[data-test-id="logo"], .n8n-branding, .logo { display: none !important; }
+
+/* Fonts & base */
+body, .app-root { font-family: Inter, Poppins, "Helvetica Neue", Arial, sans-serif !important; }
+body {
+  background: linear-gradient(180deg,#0b1120 0%, #101828 100%) !important;
+  color: #FFFFFF !important;
+}
+
+/* Header */
+header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  height: 64px !important;
+}
+
+/* Inject logo into header (replace URL if you host logo in repo) */
+header::before {
+  content: "";
+  display: block;
+  height: 44px;
+  width: 220px;
+  background: url('https://i.imgur.com/Zi6msrW.png') no-repeat center;
+  background-size: contain;
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+/* Sidebar */
+aside { background: rgba(7,10,15,0.6) !important; border-right: 1px solid rgba(255,255,255,0.03) !important; }
+
+/* Agent card */
+.agent-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(59,130,246,0.18);
+  border-radius: 16px;
+  padding: 20px;
+  color: #e6eef8;
+  box-shadow: 0 6px 18px rgba(14,30,60,0.55);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.agent-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(59,130,246,0.12);
+}
+
+/* Buttons */
+button, .button {
+  background: linear-gradient(90deg,#3B82F6,#22D3EE) !important;
+  color: #041025 !important;
+  border-radius: 12px !important;
+  padding: 10px 16px !important;
+  border: none !important;
+}
+
+/* Hide footer and some branding */
+.n8n-footer, .brand, .n8n-branding { display: none !important; }
