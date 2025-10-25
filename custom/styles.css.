@@ -1,5 +1,4 @@
-/* FORCE LOAD */
-@import url("/custom/inject.css");
+@import url("/home/node/.n8n/custom/inject.css");
 /* ========= High Consulting AI OS - custom theme ========= */
 
 /* Hide default n8n branding */
