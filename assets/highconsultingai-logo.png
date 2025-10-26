@@ -1,0 +1,15 @@
+/* Hide old logo */
+[data-test-id="logo"], .logo, .n8n-branding {
+  display: none !important;
+}
+
+/* Add your custom logo */
+header::after {
+  content: "";
+  display: block;
+  height: 60px;
+  width: 200px;
+  background: url('https://i.imgur.com/Zi6msrW.png') no-repeat center;
+  background-size: contain;
+  margin: 10px auto;
+}
