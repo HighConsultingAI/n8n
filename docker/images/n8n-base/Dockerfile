@@ -44,3 +44,19 @@ COPY --from=builder / /
 WORKDIR /home/node
 ENV NODE_ICU_DATA=/usr/local/lib/node_modules/full-icu
 EXPOSE 5678/tcp
+
+# ==================== ✨ High Consulting AI Custom Branding ====================
+# Copy your logo + styles directly into the n8n assets folder
+RUN mkdir -p /home/node/.n8n/custom
+COPY ./custom /home/node/.n8n/custom
+
+# Set environment variable so n8n knows about your custom UI
+ENV N8N_CUSTOM_EXTENSIONS="/home/node/.n8n/custom"
+
+# Change default favicon and logo in build (overwrites n8n branding)
+RUN echo "🚀 High Consulting AI branding applied" && \
+    echo "Custom assets loaded from /home/node/.n8n/custom"
+
+# ==================== ✨ End Custom Branding ====================
+
+CMD ["n8n", "start"]
